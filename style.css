@@ -1,6 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
+/* CORPO */
+
+body {
+    min-height: 100vh;
+    background-color: #32424c;
+}
+
+span {
+    color: aliceblue;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-inline-start: 2.5rem;
+}
+
+/* MENU */
+
 .menu-navegacao {
+    display: flex;
+    justify-content: space-between;
     height: 65px;
     background-color: #1c2d39;
 }
@@ -8,10 +27,14 @@
 .menu-navegacao>ul {
     height: 100%;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     gap: 2rem;
     margin-inline-end: 10px;
+}
+
+.menu-navegacao h1 {
+    display: flex;
+    align-items: center;
 }
 
 .menu-navegacao a {
@@ -31,29 +54,63 @@
 
 .menu-navegacao a:hover {
     transform: scale(1.1);
-    background-color: #32424c;
+    background-color: #28343c;
     cursor: pointer;
     font-weight: 600;
 }
 
-.breadcrumbs>ul {
+/* Farofa de pão */
+
+.breadcrumbs{
     height: 50px;
+}
+
+.breadcrumbs>ul {
+    height: 100%;
     display: flex;
     margin-inline-start: 1.5rem;
+}
+
+.breadcrumbs li {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.breadcrumbs li:not(:last-child)::after{
+    content: "→";
+    color: aliceblue;
+}
+
+.breadcrumbs li:not(:last-child)>a {
+    color: aliceblue;
+}
+
+.breadcrumbs li:last-child>a {
+    background-color: #2a165d;
+    color: aliceblue; 
+    padding: 8px; 
+    border-radius: 8px;
+    margin-inline-start: 8px;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.breadcrumbs li:last-child>a:hover {
+    text-decoration: none;
+    cursor: default;
 }
 
 .breadcrumbs a {
     display: inline-flex;
     align-items: center;
-    height: 100%;
+    /* height: 100%; */
     padding: 0 1rem;
     font-family: "Josefin Sans", sans-serif;
     text-decoration: none;
     text-transform: capitalize;
-    color: #777;
-}
-
-.breadcrumbs li:not(:last-child)::after{
-    content: "→";
-    color: #777;
+    color: aliceblue;
 }
